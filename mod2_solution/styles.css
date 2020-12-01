@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin-top: 40px;
+    margin-bottom: 80px;
+    font-family: Verdana, sans-serif;
+
+}
+
+.wrapper {
+    margin: 50px 50px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+}
+  
+
+body h1{
+    text-align: center;
+    font-weight: 300;
+}
+
+
+.box {
+    background-color: rgb(221, 208, 208);
+    color: rgb(31, 29, 29);
+    padding: 5px;
+    font-size: 15px;
+    border: 3px solid black;
+}
+
+h2{
+    padding: 5px;
+    float: right;
+    border: 2px solid black;
+    font-size: 18px;
+
+}
+
+
+
+div:first-child h2{
+    background-color: darksalmon;
+}
+
+div :nth-child(2) h2{
+    background-color: rgb(166, 227, 235);
+}
+
+div:last-child h2 {
+    background-color: rgb(212, 224, 170);
+}
+
+
+
+p{
+    margin: 5px;
+    clear: both;
+
+}
+
+
+@media only screen and (max-width: 767px){
+    .wrapper{
+    gap: 20px;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "box a box a "
+      "box b box b"
+      "box c box c";
+      max-width: 767px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+   .wrapper{
+        gap: 20px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+        "box a box a "
+        "box b box b"
+        "box c box c";
+        max-width: 991px;
+    }
+}
